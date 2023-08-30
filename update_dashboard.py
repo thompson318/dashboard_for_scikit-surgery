@@ -152,7 +152,6 @@ if __name__ == "__main__":
                 "Last Update",
             )
 
-            loc_badge = None
             loc_link = str("../loc/" + package + ".html")
             if lines_of_code is not None:
                 loc_badge = str(
@@ -162,13 +161,6 @@ if __name__ == "__main__":
                 )
 
             WriteCellWithLinkedImage(fileout, loc_badge, loc_link, "Lines of Code")
-
-            # write the badges to the HTMLs
-            for badge in badges_dictionary:
-                description = metric_dictionary[badge]
-                WriteCellWithLinkedImage(
-                    fileout, badges_dictionary[badge][0] ,badges_dictionary[badge][1], description
-                )
 
             github_user = get_package_information(package, "GitHub User")
             stars_badge = None
@@ -230,6 +222,13 @@ if __name__ == "__main__":
                 str(homepage + "/graphs/contributors"),
                 "GitHub Contributors",
             )
+            # write the badges to the HTMLs
+            for badge in badges_dictionary:
+                description = metric_dictionary[badge]
+                WriteCellWithLinkedImage(
+                    fileout, badges_dictionary[badge][0] ,badges_dictionary[badge][1], description
+                )
+
 
             fileout.write("  </tr>\n")
 
