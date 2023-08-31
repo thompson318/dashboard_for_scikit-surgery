@@ -8,6 +8,6 @@ from sksurgerystats.common import add_packages
 
 if __name__ == "__main__":
     new_packages = skspypi.find_new_pypi_packages(
-        "scikit-surgeryfred"
+        "scikit-surgery"
     )
     add_packages(new_packages)

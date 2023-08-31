@@ -10,7 +10,7 @@ token = get_token()
 if token is not None:
     g = Github(token)
     reps = g.search_repositories(
-        query="{} in:name".format("scikit-surgeryfred")
+        query="{} in:name".format("scikit-surgery")
     )
 
     try:
