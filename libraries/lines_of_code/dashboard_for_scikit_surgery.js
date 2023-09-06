@@ -1,0 +1,1 @@
+var loc_data = "9b165d04272ec6941371b3852dc003cfe30bc2f8"
